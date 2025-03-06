@@ -39,7 +39,8 @@
     "sass": "^1.77.6",
     "slick-carousel": "^1.8.1",
     "socket.io-client": "^4.8.1",
-    "styled-components": "^6.1.14"
+    "styled-components": "^6.1.14",
+    "vite-plugin-pwa": "^0.21.1"
   },
   "devDependencies": {
     "@types/lodash.debounce": "^4.0.9",
