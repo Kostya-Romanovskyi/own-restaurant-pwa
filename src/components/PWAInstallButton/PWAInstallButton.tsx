@@ -1,64 +1,67 @@
 import { useState, useEffect } from 'react';
-interface BeforeInstallPromptEvent extends Event {
-  prompt: () => void;
-  userChoice: Promise<{ outcome: string; platform: string }>;
-}
 
 const PWAInstallButton: React.FC = () => {
-  const [deferredPrompt, setDeferredPrompt] = useState<BeforeInstallPromptEvent | null>(null);
+  const [deferredPrompt, setDeferredPrompt] = useState<any>(null);
+  const [isIosDevice, setIsIosDevice] = useState<boolean>(false);
   const [isMobileDevice, setIsMobileDevice] = useState<boolean>(false);
 
   useEffect(() => {
-    // Проверка на мобильное устройство и планшет
-    const checkMobileDevice = () => {
-      const isMobile = /Mobi|Tablet|iPad|Android/i.test(navigator.userAgent);
-      setIsMobileDevice(isMobile);
-    };
+    // Проверка на мобильные устройства
+    const isMobile = /Mobi|Tablet|iPad|Android/i.test(navigator.userAgent);
+    setIsMobileDevice(isMobile);
 
-    // Проверка устройства при монтировании компонента
-    checkMobileDevice();
+    // Проверка на iOS
+    const isIos = /iPad|iPhone|iPod/.test(navigator.userAgent) && !(window as any).MSStream;
+    setIsIosDevice(isIos);
 
-    // Устанавливаем слушатель на изменение размера экрана (если нужно)
-    window.addEventListener('resize', checkMobileDevice);
-
-    return () => {
-      window.removeEventListener('resize', checkMobileDevice);
-    };
-  }, []);
-
-  useEffect(() => {
-    // Слушаем событие beforeinstallprompt
+    // Слушаем событие beforeinstallprompt (для поддерживающих браузеров)
     const handleBeforeInstallPrompt = (event: Event) => {
-      const beforeInstallEvent = event as BeforeInstallPromptEvent;
-      // Запрещаем браузеру показывать стандартный диалог
-      beforeInstallEvent.preventDefault();
-      setDeferredPrompt(beforeInstallEvent);
+      event.preventDefault();
+      setDeferredPrompt(event);
     };
 
-    // Устанавливаем обработчик события beforeinstallprompt
-    window.addEventListener('beforeinstallprompt', handleBeforeInstallPrompt as any);
+    window.addEventListener('beforeinstallprompt', handleBeforeInstallPrompt);
 
     return () => {
-      // Удаляем обработчик события beforeinstallprompt
-      window.removeEventListener('beforeinstallprompt', handleBeforeInstallPrompt as any);
+      window.removeEventListener('beforeinstallprompt', handleBeforeInstallPrompt);
     };
   }, []);
 
   const handleInstall = () => {
     if (deferredPrompt) {
-      deferredPrompt.prompt(); // Важно, что теперь TypeScript знает, что здесь есть метод prompt()
+      // Показываем системное окно для установки
+      deferredPrompt.prompt();
       deferredPrompt.userChoice.then((choiceResult: any) => {
-        console.log(choiceResult.outcome);
-        setDeferredPrompt(null); // Сбросить deferredPrompt после установки
+        if (choiceResult.outcome === 'accepted') {
+          console.log('Пользователь установил приложение');
+        } else {
+          console.log('Пользователь отклонил установку');
+        }
+        setDeferredPrompt(null); // Сбрасываем prompt после выбора
       });
     }
   };
 
-  // Устанавливаем кнопку только для мобильных устройств и планшетов
-  if (!isMobileDevice || !deferredPrompt) {
-    return null;
+  const handleIosInstall = () => {
+    alert(
+      'Чтобы установить приложение, откройте Safari, затем выберите "Добавить на экран" в меню "Поделиться".'
+    );
+  };
+
+  if (!isMobileDevice) {
+    return null; // Не показывать кнопку на десктопных устройствах
   }
 
+  if (isIosDevice) {
+    // Для iOS показываем альтернативное сообщение
+    return (
+      <div>
+        <button onClick={handleIosInstall}>Установить на экран (iOS)</button>
+      </div>
+    );
+  }
+
+  // Для других мобильных браузеров (Android)
   return (
     <div>
       <button onClick={handleInstall}>Установить приложение</button>
