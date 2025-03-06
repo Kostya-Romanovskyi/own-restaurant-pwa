@@ -11,7 +11,7 @@ export default defineConfig({
         enabled: true,
       },
       manifest: {
-        name: 'ownRestaurantPWA',
+        name: 'OwnRestaurant',
         short_name: 'OwnRestaurant',
         id: '/',
         scope: '/',
