@@ -12,6 +12,8 @@ import Toastify from './components/Toastify/Toastify.tsx';
 import ScrollToTop from 'react-scroll-to-top';
 import { FaChevronUp } from 'react-icons/fa';
 
+import PWAInstallButton from './components/PWAInstallButton/PWAInstallButton.tsx';
+
 const queryClient = new QueryClient({
   defaultOptions: {
     queries: {
@@ -28,6 +30,7 @@ ReactDOM.createRoot(document.getElementById('root')!).render(
           <ScrollToTop />
           <Toastify />
           <ReactQueryDevtools />
+          <PWAInstallButton />
           <App />
           <ScrollToTop smooth component={<FaChevronUp className="text-lg mt-1" />} />;
         </Layout>
