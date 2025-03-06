@@ -22,12 +22,12 @@ export default defineConfig({
         theme_color: '#000000',
         icons: [
           {
-            src: '/own-restaurant-pwa/pwa-192x192.png',
+            src: '/own-restaurant-pwa/sushi-192x192.png',
             sizes: '192x192',
             type: 'image/png',
           },
           {
-            src: '/own-restaurant-pwa/pwa-512x512.png',
+            src: '/own-restaurant-pwa/sushi-512x512.png',
             sizes: '512x512',
             type: 'image/png',
           },
