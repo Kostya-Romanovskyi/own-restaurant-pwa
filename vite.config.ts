@@ -17,7 +17,7 @@ export default defineConfig({
         scope: '/',
         start_url: '/own-restaurant-pwa/',
         display: 'standalone',
-        background_color: '#ffffff',
+        background_color: 'transparent',
         theme_color: '#000000',
         icons: [
           {
