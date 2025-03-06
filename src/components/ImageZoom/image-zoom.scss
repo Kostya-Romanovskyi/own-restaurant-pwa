@@ -1,0 +1,65 @@
+.sushi-container {
+  position: relative;
+  width: 100%;
+  height: 100px;
+  cursor: pointer;
+  background-color: #868484a7;
+}
+
+.sushi-layer {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  transition: transform 0.5s ease;
+}
+
+.sushi-layer img {
+  width: 100%;
+  // height: 100%;
+}
+
+.rice {
+  z-index: 3;
+  transform: translateY(0);
+
+  width: 100px;
+
+  opacity: 0;
+  visibility: hidden;
+}
+
+.fish {
+  z-index: 2;
+  transform: translateY(0);
+
+  width: 100px;
+
+  opacity: 0;
+  visibility: hidden;
+}
+
+.nori {
+  z-index: 1;
+  transform: translateY(0);
+}
+
+.disassembled {
+}
+
+.disassembled .rice {
+  transform: translateY(100px); /* Сдвигаем вниз */
+
+  opacity: 1;
+  visibility: visible;
+}
+
+.disassembled .fish {
+  transform: translateY(-100px); /* Сдвигаем вверх */
+
+  opacity: 1;
+  visibility: visible;
+}
+
+.disassembled .nori {
+  //   transform: translateX(-100px); /* Сдвигаем влево */
+}

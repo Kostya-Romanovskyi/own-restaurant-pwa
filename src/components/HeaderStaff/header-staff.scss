@@ -1,0 +1,20 @@
+.header__staff__padding {
+  padding: 20px 0 20px 0;
+}
+
+.header__staff__list {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 100px;
+}
+
+.header__staff__item {
+  font-size: 1.5rem;
+}
+
+.active__orders {
+  border: 1px solid black;
+  border-radius: 5px;
+  padding: 10px;
+}

@@ -1,0 +1,163 @@
+@import '../../styles/variables/colors';
+@import '../../styles/variables/animations';
+@import '../../styles/media';
+
+.form__flex__wrapper {
+  @media (min-width: $tablet) {
+    display: flex;
+    justify-content: space-between;
+
+    gap: 50px;
+  }
+}
+.register__form {
+  margin: 0 auto 20px auto;
+  text-align: center;
+
+  background-color: $card-bg-color;
+  border-radius: 8px;
+  padding: 16px 25px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
+  max-width: 850px;
+}
+
+.register__title {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.register__label {
+  display: block;
+  text-align: start;
+  margin-bottom: 5px;
+}
+
+.register__input {
+  font-size: 1.2rem;
+
+  padding: 5px 10px;
+
+  width: 100%;
+  height: 40px;
+
+  margin-bottom: 20px;
+  border-radius: 5px;
+
+  &:hover,
+  &:focus {
+    outline: 1px solid $main-font-color;
+  }
+}
+
+.register__file__wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  margin-bottom: 30px;
+}
+
+input[type='file'] {
+  display: none;
+}
+
+.custom-file-upload {
+  border: 1px solid #ccc;
+  display: inline-block;
+  padding: 6px 12px;
+  cursor: pointer;
+
+  transition: background-color $delay-animation $cubic-bezier;
+
+  &:hover,
+  &:focus {
+    background-color: #fff;
+  }
+}
+
+.captcha__wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  margin-bottom: 30px;
+}
+
+.register__btn {
+  background-color: $btn-main-color;
+  color: $btn-main-text-color;
+  padding: 12px 24px;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  transition:
+    background-color 0.3s ease,
+    transform 0.2s ease;
+
+  @media (min-width: $tablet) {
+    padding: 5px 10px;
+    font-size: 1.2rem;
+  }
+
+  @media (min-width: $desktop) {
+    padding: 5px 20px;
+
+    font-size: 1.5rem;
+  }
+
+  &:hover,
+  &:focus {
+    background-color: $btn-main-hover-color;
+    transform: scale(1.05);
+    box-shadow: 0 4px 8px $btn-box-shadow-color;
+  }
+}
+
+.register__error {
+  display: block;
+  color: $red-color;
+
+  margin-bottom: 20px;
+}
+
+.register__error__border {
+  box-shadow: 0px -2px 20px $red-color;
+}
+
+.valid-phone {
+  box-shadow: 0px -2px 20px $green-color !important;
+}
+
+.invalid-phone {
+  box-shadow: 0px -2px 20px #ef6065 !important;
+}
+
+.custom-phone-input {
+  border-radius: 8px;
+  padding: 10px;
+  font-size: 24px;
+
+  margin-bottom: 10px;
+}
+
+.PhoneInputInput {
+  height: 30px;
+  padding-left: 7px;
+
+  font-size: 1.1rem;
+
+  border-radius: 5px;
+}
+
+.link__indent {
+  margin-bottom: 50px;
+}
+
+.additional__indent {
+  margin-bottom: 50px;
+}

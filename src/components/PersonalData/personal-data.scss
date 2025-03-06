@@ -1,0 +1,92 @@
+@import '../../styles/media';
+@import '../../styles/variables/colors';
+
+.personal__data__wrapp {
+  @media (min-width: $tablet) {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    margin-bottom: 20px;
+  }
+}
+
+.personal__input__wrapp {
+  display: flex;
+  align-items: center;
+
+  @media (min-width: $tablet) {
+    width: 60%;
+  }
+}
+
+.personal__additional__label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+.personal__additional__info {
+  font-size: 1.2rem;
+
+  width: 100%;
+  height: 100px;
+
+  border-radius: 5px;
+
+  padding: 5px 10px;
+
+  resize: none;
+
+  border: 1px solid $main-font-color;
+  border-radius: 5px;
+
+  @media (max-width: 767px) {
+    margin-top: 20px;
+  }
+}
+
+.personal__additional__wrapper {
+  display: flex;
+  align-items: center;
+
+  margin-bottom: 20px;
+}
+
+.personal__additional__wrapper__width {
+  width: 100%;
+}
+
+.input__bg__color__disabled {
+  background-color: light-dark(rgba(239, 239, 239, 0.3));
+}
+.input__bg__color__enabled {
+  background-color: transparent;
+}
+
+.show__toggle__btn {
+  display: block;
+}
+
+.hide__toggle__btn {
+  display: none;
+}
+
+.personal__apply__btn {
+  display: block;
+  background-color: $btn-main-color;
+  color: $btn-main-text-color;
+  padding: 12px 24px;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  font-weight: bold;
+  margin: 0 auto;
+  cursor: pointer;
+
+  &:hover,
+  &:focus {
+    background-color: $btn-main-hover-color;
+    transform: scale(1.05);
+    box-shadow: 0 4px 8px $btn-box-shadow-color;
+  }
+}

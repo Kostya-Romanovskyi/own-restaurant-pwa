@@ -1,0 +1,55 @@
+@import '../../styles/variables/colors';
+
+.tabs__wrapper {
+  display: flex;
+  justify-content: center;
+  gap: 50px;
+}
+
+.tabs__btn {
+  font-size: 1.3rem;
+
+  padding: 10px 15px;
+
+  background-color: #fff;
+
+  border-radius: 5px;
+}
+
+.tabs__red {
+  background-color: $red-color;
+}
+
+.staff__modal {
+  max-width: 600px;
+  text-align: center;
+}
+
+.staff__modal__title {
+  font-size: 1.4rem;
+  margin-bottom: 30px;
+}
+
+@keyframes blink-bg {
+  0% {
+    background-color: #ff4d4d;
+  } // Красный
+  50% {
+    background-color: #ffaaaa;
+  } // Светло-красный
+  100% {
+    background-color: #ff4d4d;
+  } // Красный
+}
+
+.tabs__blink {
+  animation: blink-bg 1s infinite;
+}
+
+.staff__logout {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+
+  margin-top: 50px;
+}

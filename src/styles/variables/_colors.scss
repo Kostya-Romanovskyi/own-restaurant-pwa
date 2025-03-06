@@ -1,0 +1,43 @@
+// COLORS
+$main-bg-color: #f5f5dc;
+$secondary-bg-color: rgba(225, 225, 225, 15%);
+
+$backdrop-bg-color: #19191b90;
+
+$main-font-color: #4f4f4f;
+
+$secondary-font-color: #9e9e9e;
+
+$main-light-font-color: #000000;
+
+$card-hover-color: rgba(140, 69, 225, 40%);
+$card-bg-color: #eae2cb;
+
+$link-hover-color: #81c784;
+
+$shadow-btn-color: rgb(139, 137, 137);
+$btn-main-color: #e53935;
+$btn-main-text-color: #ffffff;
+$btn-main-hover-color: #d32f2f;
+$btn-box-shadow-color: rgba(0, 0, 0, 0.2);
+
+$red-color: #ef6065;
+$green-color: #56f264;
+$green-secondary-color: #6ac372;
+
+$pending-status-color: #ff9800;
+$processing-status-color: #2196f3;
+$cancelled-status-color: #ef6065;
+
+$status-colors: (
+  'Pending': #ff9800,
+  'In-Process': #2196f3,
+  'Picked-Up': #4caf50,
+  'Confirmed': #74c977,
+  'Completed': #4caf50,
+  'Cancelled': #f44336,
+);
+
+:export {
+  mainFontColor: $main-font-color;
+}

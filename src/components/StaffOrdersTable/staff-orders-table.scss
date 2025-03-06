@@ -1,0 +1,27 @@
+@import '../../styles/variables/fonts';
+@import '../../styles/variables/colors';
+.font {
+  font-family: $main-font;
+  margin-bottom: 50px;
+}
+
+.status__styles {
+  @each $status, $color in $status-colors {
+    &--#{$status} {
+      color: $color;
+    }
+  }
+}
+
+.full__cell {
+  width: 100%;
+  height: 100%;
+}
+
+.selector__id {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  font-size: 2.7rem;
+}

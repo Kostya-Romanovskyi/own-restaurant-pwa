@@ -1,0 +1,143 @@
+@import '../../styles/media';
+@import '../../styles/variables/colors';
+@import '../../styles/variables/animations';
+
+.order__main {
+  margin-bottom: 50px;
+}
+.order-container {
+  text-align: center;
+  background-color: $card-bg-color;
+  border-radius: 8px;
+  padding: 16px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
+  width: 700px;
+}
+.form__center__wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.show__order__additional {
+  display: block;
+}
+
+.add__chopsticks {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.order__question {
+  margin-right: 30px;
+  text-align: left;
+}
+
+.hide__order__additional {
+  display: none;
+}
+
+.order__mb {
+  margin-bottom: 40px;
+}
+
+.flex__wrapper {
+  display: flex;
+  justify-content: space-between;
+  gap: 5px;
+}
+
+.wrapper__error {
+  box-shadow: 0 3px 3px $btn-main-color;
+  border-radius: 5px;
+}
+
+input[type='radio'] {
+  display: none;
+
+  &[value='yes']:checked + .order__label__styles {
+    background-color: $green-secondary-color;
+  }
+
+  &[value='no']:checked + .order__label__styles {
+    background-color: $btn-main-color;
+  }
+}
+
+.order__label__styles {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  padding: 10px;
+
+  width: 70px;
+  height: 30px;
+
+  border: 1px solid $secondary-bg-color;
+  border-radius: 5px;
+
+  cursor: pointer;
+
+  transition: box-shadow $delay-animation $cubic-bezier;
+
+  &:hover,
+  &:focus {
+    box-shadow: inset 0px 0px 10px $shadow-btn-color;
+  }
+}
+
+.order__input {
+  width: 100%;
+  height: 30px;
+
+  padding-left: 10px;
+
+  border-radius: 5px;
+}
+
+.order__textarea {
+  width: 100%;
+  height: 60px;
+
+  padding: 10px;
+
+  resize: none;
+
+  border-radius: 5px;
+}
+
+.order__submit__btn {
+  background-color: $btn-main-color;
+  color: $btn-main-text-color;
+  padding: 12px 24px;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  font-weight: 500;
+  width: 300px;
+  cursor: pointer;
+  transition:
+    background-color 0.3s ease,
+    transform 0.2s ease;
+
+  @media (min-width: $tablet) {
+    padding: 5px 10px;
+    font-size: 0.9rem;
+  }
+
+  @media (min-width: $desktop) {
+    padding: 10px 20px;
+
+    font-size: 1.4rem;
+  }
+
+  &:hover,
+  &:focus {
+    background-color: $btn-main-hover-color;
+    transform: scale(1.05);
+    box-shadow: 0 4px 8px $btn-box-shadow-color;
+  }
+}

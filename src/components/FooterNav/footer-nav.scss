@@ -1,0 +1,43 @@
+@import '../../styles/variables/colors';
+@import '../../styles/media';
+@import '../../styles/variables/animations';
+
+.footer__nav__list {
+  margin-bottom: 20px;
+}
+
+.footer__nav__item {
+  padding: 5px 0 5px 5px;
+
+  padding-bottom: 10px;
+
+  &:not(:last-child) {
+    border-bottom: 1px solid $main-font-color;
+  }
+
+  @media (min-width: $tablet) {
+    padding: 10px 0 10px 10px;
+  }
+}
+
+.footer__nav__link {
+  display: block;
+  width: 100%;
+
+  font-size: 1.3rem;
+
+  transition: color $delay-animation $cubic-bezier;
+
+  @media (min-width: $tablet) {
+    font-size: 1.6rem;
+  }
+
+  @media (min-width: $desktop) {
+    font-size: 1.8rem;
+  }
+
+  &:hover,
+  &:focus {
+    color: $link-hover-color;
+  }
+}

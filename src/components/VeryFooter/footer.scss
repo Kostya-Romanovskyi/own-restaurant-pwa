@@ -1,0 +1,64 @@
+@import '../../styles/media';
+@import '../../styles/variables/colors';
+@import '../../styles/variables/animations';
+
+footer {
+  border-top: 1px solid #000;
+}
+
+.footer__info {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+
+  padding: 20px 0 20px 0;
+}
+
+.footer__info > div {
+  flex: 1 1 calc((100% - 20px) / 2);
+}
+
+.footer__info__logo {
+  display: none;
+}
+
+.footer__info__rights {
+  text-align: right;
+}
+
+.footer__info__wrapp {
+}
+
+.footer__info__title {
+}
+
+.footer__info__list {
+  display: flex;
+  align-items: center;
+}
+.footer__info__item {
+  font-size: 0.7rem;
+  transition: color $delay-animation $cubic-bezier;
+
+  &:not(:first-child) {
+    margin-left: 10px;
+  }
+
+  @media (min-width: $tablet) {
+    font-size: 1rem;
+  }
+
+  &:hover,
+  &:focus {
+    color: $link-hover-color;
+  }
+}
+
+.footer__info__span {
+  display: block;
+
+  @media (min-width: $tablet) {
+    display: inline;
+  }
+}

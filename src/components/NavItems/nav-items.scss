@@ -1,0 +1,53 @@
+@import '../../styles/media';
+@import '../../styles/variables/colors';
+@import '../../styles/variables/fonts';
+@import '../../styles/variables/animations';
+
+.nav {
+	margin-bottom: 30px;
+
+	@media (min-width: $tablet) {
+		margin-bottom: 0;
+	}
+}
+
+.nav__list {
+	font-size: $mobile-sec-font-size;
+	margin-top: 20px;
+
+	@media (min-width: $tablet) {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		gap: 20px;
+
+		font-size: 15px;
+
+		margin-top: 0;
+	}
+
+	@media (min-width: $desktop) {
+		font-size: 20px;
+	}
+}
+
+.nav__item {
+	border-bottom: 1px solid $secondary-bg-color;
+}
+
+.nav__link {
+	display: block;
+
+	padding: 20px 0 20px 20px;
+
+	transition: color $delay-animation $cubic-bezier;
+
+	@media (min-width: $tablet) {
+		padding: 0;
+	}
+
+	&:hover,
+	&:focus {
+		color: $link-hover-color;
+	}
+}

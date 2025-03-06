@@ -1,0 +1,30 @@
+@import '../../styles/variables/colors';
+
+.success__register__wrapper {
+  margin: 0 auto 20px auto;
+  text-align: center;
+
+  background-color: $card-bg-color;
+  border-radius: 8px;
+  padding: 25px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
+  max-width: 500px;
+}
+
+.success__register__title {
+}
+
+.success__register__content {
+}
+
+.success__register__link {
+  font-size: 1.3rem;
+  text-decoration: underline;
+}
+
+.success__register__indent {
+  margin-bottom: 20px;
+}

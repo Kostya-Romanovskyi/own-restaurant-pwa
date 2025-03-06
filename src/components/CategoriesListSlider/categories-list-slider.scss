@@ -1,0 +1,25 @@
+@import '../../styles/media';
+
+.category__list {
+  display: flex;
+
+  gap: 40px;
+
+  overflow-x: scroll;
+
+  @media (min-width: $tablet) {
+    overflow-x: auto;
+  }
+
+  margin-bottom: 50px;
+}
+
+.decorate {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.decorate__img {
+  width: 25%;
+}

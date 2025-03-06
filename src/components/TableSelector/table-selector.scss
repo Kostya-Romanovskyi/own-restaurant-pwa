@@ -1,0 +1,68 @@
+@import '../../styles/media';
+@import '../../styles/variables/colors';
+
+.table__title {
+  font-size: 1.4rem;
+  margin-bottom: 20px;
+}
+
+.table__wrapper {
+  margin-bottom: 30px;
+  @media (min-width: $tablet) {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+
+    gap: 20px;
+  }
+}
+
+.table__fieldset {
+  border: none;
+
+  @media (max-width: $tablet) {
+    margin-bottom: 30px;
+  }
+}
+.table__label {
+  position: relative;
+
+  display: block;
+  background-color: $card-bg-color;
+  border-radius: 8px;
+  padding: 30px 16px 30px 16px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
+  cursor: pointer;
+
+  &:hover,
+  &:focus {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15);
+  }
+}
+
+.table__label--disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.table__radio {
+  display: none;
+
+  &:checked + .table__label {
+    background-color: #fff;
+
+    &::after {
+      content: '✔';
+      display: block;
+      font-size: 1.5rem;
+      color: $green-secondary-color;
+
+      position: absolute;
+      top: 20px;
+      right: 40px;
+    }
+  }
+}

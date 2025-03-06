@@ -1,0 +1,148 @@
+@import '../../styles/variables/colors';
+
+.order__details__wrapp {
+  display: flex;
+  align-items: center;
+
+  margin-bottom: 30px;
+}
+
+.order__details__title {
+  font-size: 1.3rem;
+  font-weight: 700;
+
+  color: rgb(182, 184, 183);
+}
+
+.order__details__id {
+  font-size: 1.5rem;
+  margin-left: 10px;
+  color: rgb(131, 130, 129);
+}
+
+.order__details__status {
+  padding: 2px 3px;
+  margin-left: 20px;
+
+  border-radius: 5px;
+
+  @each $status, $color in $status-colors {
+    &--#{$status} {
+      color: $color;
+      border: 1px solid $color;
+    }
+  }
+}
+
+.order__details__date {
+  font-size: 0.9rem;
+
+  margin-left: 10px;
+  padding-left: 10px;
+
+  border-left: 1px solid rgb(142, 138, 138);
+  color: rgb(142, 138, 138);
+}
+
+.order__info__wrapper {
+  display: grid;
+  grid-template-columns: 0.5fr 1fr;
+
+  gap: 30px;
+}
+
+.order__info__wrapp {
+  padding: 20px;
+
+  border-radius: 5px;
+  box-shadow: 5px 5px 20px rgb(149, 143, 143);
+}
+
+.order__info__customer__title {
+  font-weight: 600;
+
+  margin-bottom: 20px;
+}
+
+.customer__name__wrapp {
+  display: flex;
+  align-items: center;
+}
+
+.sections__style {
+  margin-bottom: 10px;
+  padding-bottom: 10px;
+
+  border-bottom: 1px solid rgb(142, 138, 138);
+}
+
+.customer__avatar {
+  width: 50px;
+  border-radius: 50%;
+  object-fit: contain;
+}
+
+.customer__name {
+  margin-left: 15px;
+}
+
+.order__info__subtitle {
+  font-size: 0.9rem;
+  font-weight: 600;
+
+  margin-bottom: 15px;
+}
+
+.customer__phone {
+  margin-bottom: 10px;
+
+  & + p {
+    margin-bottom: 10px;
+  }
+}
+
+.order__info__item__pic {
+  width: 150px;
+  object-fit: 'contain';
+}
+
+.order__info__item__name {
+  font-size: 1.1rem;
+  font-weight: 600;
+}
+
+.item__stat__wrapp {
+  display: flex;
+  justify-content: space-between;
+}
+
+.order__info__item {
+  display: flex;
+  justify-content: space-between;
+
+  margin-bottom: 20px;
+  padding-bottom: 20px;
+
+  border-bottom: 1px solid rgb(142, 138, 138);
+}
+
+.order__info__name {
+  margin-left: 30px;
+}
+
+.allergy {
+  padding: 10px;
+  border-radius: 5px;
+  box-shadow: 1px 1px 20px $red-color;
+}
+
+.order__info__distance {
+  margin-bottom: 10px;
+}
+
+.modal__select__status {
+  margin-left: 30px;
+}
+.modal__status__update {
+  margin-left: 30px;
+}

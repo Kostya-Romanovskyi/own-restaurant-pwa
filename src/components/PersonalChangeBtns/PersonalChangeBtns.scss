@@ -1,0 +1,15 @@
+@import '../../styles/variables/colors';
+@import '../../styles/media';
+
+.icons__size {
+  font-size: 1.3rem;
+  margin-left: 20px;
+
+  @media ((min-width: $tablet) and (max-width: $desktop)) {
+    margin-left: 10px;
+  }
+}
+
+.cross__icon__color {
+  color: $red-color;
+}

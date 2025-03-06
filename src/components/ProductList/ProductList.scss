@@ -1,0 +1,25 @@
+@import '../../styles/media';
+
+.product-list {
+  gap: 30px;
+  margin-bottom: 40px;
+
+  @media (max-width: 479px) {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  @media (min-width: $mobile) {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  @media (min-width: $tablet) {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  @media (min-width: $desktop) {
+    grid-template-columns: repeat(5, 1fr);
+  }
+}

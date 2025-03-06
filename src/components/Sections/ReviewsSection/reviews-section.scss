@@ -1,0 +1,68 @@
+@import '../../../styles/media';
+
+.reviews__title {
+  text-align: center;
+  font-weight: 700;
+  font-size: 2rem;
+  margin-bottom: 20px;
+}
+
+.reviews {
+  @media (min-width: $tablet) {
+    // display: flex;
+    // gap: 15px;
+    // flex-wrap: wrap;
+
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+  }
+}
+
+.review {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  padding: 15px;
+  border-radius: 8px;
+  background-color: #f9f9f9;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+
+  margin-bottom: 20px;
+
+  @media (min-width: $desktop) {
+    gap: 42px;
+  }
+}
+
+.review__avatar {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.review__content {
+  display: flex;
+  flex-direction: column;
+}
+
+.review__author {
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.review__date {
+  font-size: 12px;
+  color: #666;
+}
+
+.review__rating {
+  color: #f8b400;
+  font-size: 18px;
+}
+
+.review__text {
+  font-size: 14px;
+  color: #333;
+}

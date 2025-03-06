@@ -1,0 +1,66 @@
+@import '../../styles/media';
+@import '../../styles/variables/colors';
+
+.children__title {
+  font-size: 1.4rem;
+  margin-bottom: 20px;
+}
+
+.children__wrapper {
+  margin-bottom: 20px;
+  @media (min-width: $tablet) {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+  }
+}
+
+.children__fieldset {
+  border: none;
+
+  @media (max-width: $tablet) {
+    margin-bottom: 30px;
+  }
+  @media (min-width: $tablet) {
+    width: 300px;
+  }
+}
+
+.children__label {
+  position: relative;
+  display: block;
+  background-color: $card-bg-color;
+  border-radius: 8px;
+  padding: 16px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
+  cursor: pointer;
+
+  &:hover,
+  &:focus {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15);
+  }
+}
+
+.children__radio {
+  display: none;
+
+  &:checked + .children__label {
+    background-color: #fff;
+
+    &::after {
+      content: '✔';
+      display: block;
+      font-size: 1.5rem;
+      color: $green-secondary-color;
+
+      position: absolute;
+      top: 10px;
+      right: 30px;
+    }
+  }
+}

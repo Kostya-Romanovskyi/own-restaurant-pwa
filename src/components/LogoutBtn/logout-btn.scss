@@ -1,0 +1,33 @@
+@import '../../styles/media';
+@import '../../styles/variables/colors';
+@import '../../styles/variables/animations';
+
+.logout__btn {
+	background-color: #E53935;
+	color: #FFFFFF;
+	padding: 12px 24px;
+	border: none;
+	border-radius: 8px;
+	font-size: 16px;
+	font-weight: bold;
+	cursor: pointer;
+	transition: background-color 0.3s ease, transform 0.2s ease;
+
+	@media (min-width: $tablet) {
+		padding: 5px 10px;
+		font-size: 0.9rem;
+	}
+
+	@media (min-width: $desktop) {
+		padding: 5px 20px;
+
+		font-size: 1.1rem;
+	}
+
+	&:hover,
+	&:focus {
+		background-color: #D32F2F;
+		transform: scale(1.05);
+		box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+	}
+}

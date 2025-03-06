@@ -1,0 +1,49 @@
+@import '../../styles/media';
+@import '../../styles/variables/colors';
+@import '../../styles/variables/animations';
+
+.show__desktop {
+  @media (max-width: 767px) {
+    display: none;
+  }
+  @media (min-width: $tablet) {
+    display: block;
+  }
+}
+
+.profile__list {
+}
+
+.profile__item {
+  display: flex;
+  align-items: center;
+
+  font-size: 0.9rem;
+
+  padding: 10px;
+
+  transition: color $delay-animation $cubic-bezier;
+
+  @media (min-width: $desktop) {
+    font-size: 1.3rem;
+  }
+}
+
+.active-item {
+  box-shadow: inset 0px -2px 5px $secondary-bg-color;
+}
+
+.profile__link {
+  display: block;
+  &:not(:last-child) {
+    border-bottom: 1px solid $btn-box-shadow-color;
+  }
+
+  &:hover .profile__item {
+    color: $link-hover-color;
+  }
+}
+.profile__icon {
+  font-size: 1.5rem;
+  margin-left: 30px;
+}

@@ -1,0 +1,26 @@
+@import '../../styles/variables/colors';
+
+.rc-pagination-item-active {
+  color: #d0af4d !important;
+  border-color: #d0af4d !important;
+}
+
+.rc-pagination-item-active a {
+  color: #d0af4d !important;
+  border-color: #d0af4d !important;
+}
+
+.rc-pagination-item:hover a {
+  color: #d0af4d !important;
+  border-color: #d0af4d !important;
+}
+
+.rc-pagination-item:hover {
+  border-color: #d0af4d !important;
+}
+
+.pagination__wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}

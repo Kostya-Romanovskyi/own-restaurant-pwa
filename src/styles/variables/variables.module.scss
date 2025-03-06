@@ -1,0 +1,7 @@
+@import './_colors.scss';
+
+:export {
+  mainFontColor: #{$main-font-color};
+  selectBgColor: #{$main-bg-color};
+  cardBgColor: #{$card-bg-color};
+}

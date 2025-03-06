@@ -1,0 +1,43 @@
+@import '../../../styles/variables/colors';
+@import '../../../styles/media';
+
+.info__title {
+  text-align: center;
+  font-weight: 700;
+  font-size: 2rem;
+  margin-bottom: 20px;
+}
+
+.info__item {
+  margin-bottom: 40px;
+
+  @media (min-width: $tablet) {
+    display: flex;
+    gap: 20px;
+
+    &:nth-child(even) {
+      flex-direction: row-reverse;
+    }
+  }
+}
+
+.info__subtitle {
+  font-size: 1.5rem;
+  text-align: center;
+  margin-bottom: 20px;
+
+  @media (min-width: $tablet) {
+    font-size: 1.2rem;
+  }
+}
+
+.info__text {
+  margin-bottom: 20px;
+}
+
+.info__img {
+  width: 100%;
+  @media (min-width: $tablet) {
+    width: 50%;
+  }
+}

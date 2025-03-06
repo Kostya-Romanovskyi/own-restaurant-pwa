@@ -1,0 +1,32 @@
+@import '../../styles/variables/colors';
+
+.reservation__title {
+  font-size: 1.7rem;
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.existed__reservation {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  text-align: center;
+}
+
+.test {
+  background-color: $card-bg-color;
+  border-radius: 8px;
+  padding: 16px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
+  max-width: 800px;
+}
+.existed__reservation--indent {
+  margin-bottom: 20px;
+}
+.existed__reservation__link {
+  text-decoration: underline;
+}

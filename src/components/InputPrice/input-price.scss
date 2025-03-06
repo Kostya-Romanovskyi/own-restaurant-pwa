@@ -1,0 +1,48 @@
+@import '../../styles/variables/colors';
+@import '../../styles/media';
+
+.input__wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  @media (max-width: $tablet) {
+    height: 40px;
+  }
+}
+
+.input__price {
+  text-align: center;
+
+  width: 40px;
+  height: 100%;
+
+  font-size: 1.1rem;
+
+  border-radius: 5px;
+
+  @media (min-width: $tablet) {
+    width: 100px;
+    height: 30px;
+  }
+}
+.count {
+  width: 28px;
+
+  font-size: 1.1rem;
+  color: $main-font-color;
+}
+
+.left {
+  border-top-left-radius: 5px;
+  border-bottom-left-radius: 5px;
+
+  margin-right: 10px;
+}
+
+.right {
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 5px;
+
+  margin-left: 10px;
+}

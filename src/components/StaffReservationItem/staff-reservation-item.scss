@@ -1,0 +1,80 @@
+@import '../../styles/media';
+@import '../../styles/variables/colors';
+@import '../../styles/variables/animations';
+
+.reservation__item {
+  list-style: none;
+}
+
+.reservation__item__flex {
+  display: flex;
+  justify-content: space-between;
+}
+
+.reservation__left__wrapper {
+  position: relative;
+  width: 80%;
+}
+
+.staff__reservation__icon {
+  position: absolute;
+  top: -13px;
+  right: -40px;
+
+  font-size: 2rem;
+}
+
+.reservation__additional__info {
+  margin-bottom: 20px;
+}
+
+.reservation__image__wrapper--margin {
+  margin: 0;
+}
+
+.reservation__status {
+  margin-left: 20px;
+}
+
+.reservation__indent {
+  margin-bottom: 30px;
+}
+
+.user__info {
+  display: flex;
+}
+
+.user__info--margin {
+  margin-bottom: 10px;
+}
+
+.user__lastName {
+  margin-left: 5px;
+}
+
+.user__phone {
+  margin-left: 20px;
+}
+
+.reservation__user__add {
+  margin-bottom: 30px;
+}
+
+.reservation__item__wrapper--margin {
+  margin-bottom: 50px;
+}
+
+.status {
+  margin-left: 20px;
+}
+.reservations__status {
+  margin-left: 50px;
+  padding: 10px;
+  font-weight: 700;
+}
+
+.reservation__flex {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+}

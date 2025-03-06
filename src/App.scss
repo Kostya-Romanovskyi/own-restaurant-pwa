@@ -1,0 +1,77 @@
+@import './styles//media';
+@import './styles/variables/fonts';
+@import './styles/variables/colors';
+@import './styles/reset';
+@import './styles/base';
+@import './styles/variables/animations';
+
+body {
+  font-family: $main-font-2;
+
+  background-color: $main-bg-color;
+  color: $main-font-color;
+
+  overflow-x: hidden;
+}
+
+.scroll__block {
+  overflow: hidden;
+}
+
+.section {
+  padding: 40px 20px;
+
+  @media (min-width: $tablet) {
+    padding: 40px 0;
+  }
+}
+
+.footer {
+  padding: 20px 0;
+  border-top: 1px solid $secondary-bg-color;
+
+  @media (min-width: $tablet) {
+    padding: 40px 0;
+  }
+
+  @media (min-width: $desktop) {
+    padding: 60px 0;
+  }
+}
+
+.button__type--btn {
+  text-align: center;
+
+  width: 155px;
+  height: 33px;
+
+  border: 1px solid $secondary-bg-color;
+  border-radius: 5px;
+
+  box-shadow: inset 0px 0px 4px $shadow-btn-color;
+  transition:
+    box-shadow $delay-animation $cubic-bezier,
+    color $delay-animation $cubic-bezier;
+
+  color: $main-font-color;
+
+  @media (min-width: $tablet) {
+    padding: 5px 10px;
+    font-size: 0.9rem;
+  }
+
+  @media (min-width: $desktop) {
+    padding: 5px 20px;
+
+    font-size: 1rem;
+  }
+
+  &:hover,
+  &:focus {
+    box-shadow: inset 0px 0px 10px $card-hover-color;
+  }
+}
+
+.button__type--indent {
+  margin-top: 20px;
+}

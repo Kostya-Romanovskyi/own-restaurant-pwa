@@ -1,0 +1,35 @@
+@import '../../styles/media';
+@import '../../styles/variables/colors';
+
+.calendar__wrapper {
+  margin: 0 auto 20px auto;
+  max-width: 400px;
+}
+
+.calendar__title {
+  font-size: 1.4rem;
+  margin-bottom: 20px;
+}
+
+.reservation__submit__btn {
+  display: block;
+  background-color: $btn-main-color;
+  color: $btn-main-text-color;
+  padding: 12px 24px;
+  margin: 0 auto 30px auto;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  transition:
+    background-color 0.3s ease,
+    transform 0.2s ease;
+
+  &:hover,
+  &:focus {
+    background-color: $btn-main-hover-color;
+    transform: scale(1.05);
+    box-shadow: 0 4px 8px $btn-box-shadow-color;
+  }
+}

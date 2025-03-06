@@ -1,0 +1,29 @@
+@import '../../styles/variables/colors';
+@import '../../styles/media';
+
+.container__width {
+  width: 100%;
+
+  @media (min-width: $tablet) {
+    width: 80%;
+  }
+}
+
+.main__label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+.main__input {
+  font-size: 1.2rem;
+
+  padding: 5px 10px;
+
+  width: 100%;
+  height: 40px;
+
+  margin-bottom: 15px;
+
+  border: 1px solid $main-font-color;
+  border-radius: 5px;
+}

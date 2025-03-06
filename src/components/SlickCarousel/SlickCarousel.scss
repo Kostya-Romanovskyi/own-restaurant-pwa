@@ -1,0 +1,59 @@
+@import '../../styles/variables/colors';
+@import '../../styles/media';
+
+.slider__container {
+  width: 100%;
+
+  max-width: 100%;
+  overflow: hidden;
+  margin: 0 auto;
+
+  @media (min-width: $tablet) {
+    overflow: initial;
+  }
+}
+
+.slider__img__wrapp {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.slider__img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
+.slick-prev:before {
+  font-size: 30px;
+  color: $main-font-color;
+
+  @media (min-width: $tablet) {
+    position: absolute;
+    left: -50px !important;
+  }
+
+  @media (min-width: $desktop) {
+    left: -100px !important;
+
+    font-size: 3rem;
+  }
+}
+
+.slick-next:before {
+  font-size: 30px;
+  color: $main-font-color;
+
+  @media (min-width: $tablet) {
+    position: absolute;
+    right: -50px !important;
+  }
+
+  @media (min-width: $desktop) {
+    right: -100px !important;
+
+    font-size: 3rem;
+  }
+}

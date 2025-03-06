@@ -1,0 +1,30 @@
+@import '../../styles/variables/colors';
+
+.admin__wrapper {
+	display: grid;
+	grid-template-columns: 1fr 2fr;
+}
+
+.admin__margin {
+	margin-right: 30px;
+}
+
+.manage__title {
+	margin-bottom: 30px;
+}
+
+.manage__container {
+	padding: 20px;
+
+	border: 1px solid $secondary-bg-color;
+	border-radius: 5px;
+
+	margin-bottom: 50px;
+}
+
+.manage__unit__title {
+	font-size: 1.5rem;
+	font-weight: 700;
+
+	margin-bottom: 10px;
+}

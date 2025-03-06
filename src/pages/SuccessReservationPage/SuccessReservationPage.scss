@@ -1,0 +1,46 @@
+@import '../../styles/variables/colors';
+
+.success__position {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  margin-bottom: 50px;
+}
+
+.success__reservation__wrapper {
+  background-color: $card-bg-color;
+  border-radius: 8px;
+  padding: 16px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
+  max-width: 800px;
+}
+.success__reservation__title {
+  text-align: center;
+  margin-bottom: 20px;
+}
+.success__reservation__info {
+  margin-bottom: 20px;
+}
+
+.success__reservation__notify {
+  font-size: 1.5rem;
+  text-align: center;
+}
+
+.success__reservation__nav__wrapp {
+  text-align: center;
+  font-size: 1.2rem;
+  margin-bottom: 50px;
+}
+
+.success__reservation__style:hover {
+  text-decoration: underline;
+}
+
+.success__reservation__menu {
+  margin-left: 30px;
+}
