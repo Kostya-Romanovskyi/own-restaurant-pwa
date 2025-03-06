@@ -16,7 +16,7 @@ export default defineConfig({
         short_name: 'PWA',
         id: '/',
         scope: '/',
-        start_url: '/',
+        start_url: '/own-restaurant-pwa/',
         display: 'standalone',
         background_color: '#ffffff',
         theme_color: '#000000',
